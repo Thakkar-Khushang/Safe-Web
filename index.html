@@ -44,6 +44,7 @@
     
     
     <div class="main">
+        <p id="timer">Time to session timeout: <span id="timeOut">60</span> sec</p>
         <form>
             <input type="text" id="input" placeholder="Enter your username" oninput="onpressed()">
             <input id="show-images" type="button" value="Show images" onclick="show()"></input>
@@ -141,5 +142,6 @@
     <!-- Button to alternate numbers and special keys rows -->
     <script src="password.js"></script>
     <script src="index.js"></script>
+    <script src="brute-force-prevention.js"></script>
 </body>
 </html>
