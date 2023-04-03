@@ -94,6 +94,9 @@ function special(){
 function backspace(){
     var input = document.getElementById("input").value;
     // delete last character
+    if(input.length == 0){
+        return;
+    }
     var newInput = input.slice(0, -1);
     document.getElementById("input").value = newInput;
 }
