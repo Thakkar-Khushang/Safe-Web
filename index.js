@@ -116,6 +116,9 @@ function append(char){
 function onpressed(){
     // get the last character inputted
     var input = document.getElementById("input").value;
+    if(input.length == 0){
+        return;
+    }
     var lastChar = input.slice(-1);
     var newChar = map[lastChar];
     // new input
