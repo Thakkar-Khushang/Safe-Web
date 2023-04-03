@@ -27,7 +27,7 @@ img{
     grid-template-columns: auto auto auto;
     padding: 10px;
 }
-#submit{
+#submit, #image{
     display: none;
 }
 header{

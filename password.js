@@ -145,6 +145,9 @@ function save(){
     var isValid = checkUsername(input.value)
     if (isValid) {
         console.log(out)
+        var button = document.getElementById('image')
+        button.style.display = "block"
+        fetchImage()
     } else{
         console.log("Invalid username")
     }

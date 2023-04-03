@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.0/web3.min.js"
+      integrity="sha512-RGPKVfQewHGfk9yaB7ThGPKAQU+civS5awsfStLg22jrWbqgDkNzPtIwNFpFApr3ccjB730SRxi+KnDjhIuTpw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <link rel="stylesheet" href="index.css">
     <script src="hash.js"></script>
+    <script src="bundle.js"></script>
 </head>
 <body>
     <header>
@@ -50,7 +57,9 @@
             <input id="show-images" type="button" value="Show images" onclick="show()"></input>
             <div id="images"></div>
             <input id="submit" type="button" value="Submit" onclick="save()"></input>
+            <input id="image" type="file" name="image" accept="image/*" onchange="storeImage(event)" value="Store Image">
         </form>
+        <div id="fetched-img"></div>
         <!-- On webpage keyboard -->
         <div id="keyboard">
             <!-- Special Characters row-->
