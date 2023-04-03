@@ -21,7 +21,6 @@ for(var i = 0; i < 26; i++){
 // generate cipher
 var cipher = pool = "0123456789";
 for(var i = 0; i < 10; i++){
-    console.log(pool)
     // shift by shift amount
     var shift = Math.floor(Math.random() * 1000) + 1;
     var shifted = (i + shift) % pool.length;

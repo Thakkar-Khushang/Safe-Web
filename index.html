@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <script src="hash.js"></script>
 </head>
 <body>
     <header>
@@ -45,6 +46,9 @@
     <div class="main">
         <form>
             <input type="text" id="input" placeholder="Enter your username" oninput="onpressed()">
+            <input id="show-images" type="button" value="Show images" onclick="show()"></input>
+            <div id="images"></div>
+            <input id="submit" type="button" value="Submit" onclick="save()"></input>
         </form>
         <!-- On webpage keyboard -->
         <div id="keyboard">
@@ -135,6 +139,7 @@
         </div>
     </div>
     <!-- Button to alternate numbers and special keys rows -->
+    <script src="password.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

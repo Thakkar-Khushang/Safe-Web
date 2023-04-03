@@ -7,6 +7,23 @@ body{
     background-color: #070505;
     height: 100vh;
 }
+img{
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+
+}
+#images{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+#submit{
+    display: none;
+}
 header{
     display: flex;
     justify-content: space-between;
