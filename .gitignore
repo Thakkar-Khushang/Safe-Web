@@ -1,3 +1,7 @@
 /extras
 
+/vendor
+
+/keylogger
+
 .env
