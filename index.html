@@ -9,12 +9,13 @@
 </head>
 <body>
     <header>
-        <h1>Typing Test</h1>
+        <h1>Safe-Web</h1>
         <div>
             <p>XSS Prevention</p>
             <p>Brute Force Prevention</p>
             <p>Hashing</p>
             <p>Antikeylogger</p>
+            <p>Blockchain</p>
         </div>
     </header>
 
@@ -49,85 +50,86 @@
         <div id="keyboard">
             <!-- Special Characters row-->
             <div class="row Second">
-                <button class="key" onclick="append('`')">`</button>
-                <button class="key" onclick="append('!')">!</button>
-                <button class="key" onclick="append('@')">@</button>
-                <button class="key" onclick="append('#')">#</button>
-                <button class="key" onclick="append('$')">$</button>
-                <button class="key" onclick="append('%')">%</button>
-                <button class="key" onclick="append('^')">^</button>
-                <button class="key" onclick="append('&')">&</button>
-                <button class="key" onclick="append('*')">*</button>
-                <button class="key" onclick="append('(')">(</button>
-                <button class="key" onclick="append(')')">)</button>
-                <button class="key" onclick="append('_')">_</button>
-                <button class="key" onclick="append('+')">+</button>
-                <button class="key" onclick="backspace()">Backspace</button>
+                <button id="`" class="key" onclick="append('`')">`</button>
+                <button id="!" class="key" onclick="append('!')">!</button>
+                <button id="@" class="key" onclick="append('@')">@</button>
+                <button id="#" class="key" onclick="append('#')"> #</button>
+                <button id="$" class="key" onclick="append('$')">$</button>
+                <button id="%" class="key" onclick="append('%')">%</button>
+                <button id="^" class="key" onclick="append('^')">^</button>
+                <button id="&" class="key" onclick="append('&')">&</button>
+                <button id="*" class="key" onclick="append('*')">*</button>
+                <button id="(" class="key" onclick="append('(')">(</button>
+                <button id=")" class="key" onclick="append(')')">)</button>
+                <button id="_" class="key" onclick="append('_')">_</button>
+                <button id="+" class="key" onclick="append('+')">+</button>
+                <button id="Backspace" class="key" onclick="backspace()">Backspace</button>
             </div>
     
             <!-- numbers row -->
             <div class="row First">
-                <button class="key" onclick="append('1')">1</button>
-                <button class="key" onclick="append('2')">2</button>
-                <button class="key" onclick="append('3')">3</button>
-                <button class="key" onclick="append('4')">4</button>
-                <button class="key" onclick="append('5')">5</button>
-                <button class="key" onclick="append('6')">6</button>
-                <button class="key" onclick="append('7')">7</button>
-                <button class="key" onclick="append('8')">8</button>
-                <button class="key" onclick="append('9')">9</button>
-                <button class="key" onclick="append('0')">0</button>
-                <button class="key" onclick="append('-')">-</button>
-                <button class="key" onclick="append('=')">=</button>
-                <button class="key" onclick="backspace()">Backspace</button>
+
+                <button id="1" class="key" onclick="append('1')">1</button>
+                <button id="2" class="key" onclick="append('2')">2</button>
+                <button id="3" class="key" onclick="append('3')">3</button>
+                <button id="4" class="key" onclick="append('4')">4</button>
+                <button id="5" class="key" onclick="append('5')">5</button>
+                <button id="6" class="key" onclick="append('6')">6</button>
+                <button id="7" class="key" onclick="append('7')">7</button>
+                <button id="8" class="key" onclick="append('8')">8</button>
+                <button id="9" class="key" onclick="append('9')">9</button>
+                <button id="0" class="key" onclick="append('0')">0</button>
+                <button id="-" class="key" onclick="append('-')">-</button>
+                <button id="=" class="key" onclick="append('=')">=</button>
+                <button id="Backspace" class="key" onclick="backspace()">Backspace</button>
             </div>
             <div class="row">
-                <button class="key alphabet" onclick="append('q')">q</button>
-                <button class="key alphabet" onclick="append('w')">w</button>
-                <button class="key alphabet" onclick="append('e')">e</button>
-                <button class="key alphabet" onclick="append('r')">r</button>
-                <button class="key alphabet" onclick="append('t')">t</button>
-                <button class="key alphabet" onclick="append('y')">y</button>
-                <button class="key alphabet" onclick="append('u')">u</button>
-                <button class="key alphabet" onclick="append('i')">i</button>
-                <button class="key alphabet" onclick="append('o')">o</button>
-                <button class="key alphabet" onclick="append('p')">p</button>
-                <button class="key First" onclick="append('[')">[</button>
-                <button class="key First" onclick="append(']')">]</button>
-                <button class="key First" onclick="append('\\')">\</button>
-                <button class="key Second" onclick="append('{')">{</button>
-                <button class="key Second" onclick="append('}')">}</button>
-                <button class="key Second" onclick="append('|')">|</button>
+                <button id="q" class="key alphabet" onclick="append('q')">q</button>
+                <button id="w" class="key alphabet" onclick="append('w')">w</button>
+                <button id="e" class="key alphabet" onclick="append('e')">e</button>
+                <button id="r" class="key alphabet" onclick="append('r')">r</button>
+                <button id="t" class="key alphabet" onclick="append('t')">t</button>
+                <button id="y" class="key alphabet" onclick="append('y')">y</button>
+                <button id="u" class="key alphabet" onclick="append('u')">u</button>
+                <button id="i" class="key alphabet" onclick="append('i')">i</button>
+                <button id="o" class="key alphabet" onclick="append('o')">o</button>
+                <button id="p" class="key alphabet" onclick="append('p')">p</button>
+                <button id="[" class="key First" onclick="append('[')">[</button>
+                <button id="]" class="key First" onclick="append(']')">]</button>
+                <button id="\\" class="key First" onclick="append('\\')">\</button>                
+                <button id="{" class="key Second" onclick="append('{')">{</button>
+                <button id="}" class="key Second" onclick="append('}')">}</button>
+                <button id="|" class="key Second" onclick="append('|')">|</button>
             </div>
             <div class="row">
-                <button class="key alphabet" onclick="append('a')">a</button>
-                <button class="key alphabet" onclick="append('s')">s</button>
-                <button class="key alphabet" onclick="append('d')">d</button>
-                <button class="key alphabet" onclick="append('f')">f</button>
-                <button class="key alphabet" onclick="append('g')">g</button>
-                <button class="key alphabet" onclick="append('h')">h</button>
-                <button class="key alphabet" onclick="append('j')">j</button>
-                <button class="key alphabet" onclick="append('k')">k</button>
-                <button class="key alphabet" onclick="append('l')">l</button>
-                <button class="key First" onclick="append(';')">;</button>
-                <button class="key First" onclick="append('\'')">'</button>
-                <button class="key Second" onclick="append(':')">:</button>
-                <button class="key Second" onclick='append(`\"`)'>"</button>
+                <button id="a" class="key alphabet" onclick="append('a')">a</button>
+                <button id="s" class="key alphabet" onclick="append('s')">s</button>
+                <button id="d" class="key alphabet" onclick="append('d')">d</button>
+                <button id="f" class="key alphabet" onclick="append('f')">f</button>
+                <button id="g" class="key alphabet" onclick="append('g')">g</button>
+                <button id="h" class="key alphabet" onclick="append('h')">h</button>
+                <button id="j" class="key alphabet" onclick="append('j')">j</button>
+                <button id="k" class="key alphabet" onclick="append('k')">k</button>
+                <button id="l" class="key alphabet" onclick="append('l')">l</button>
+                <button id=";" class="key First" onclick="append(';')">;</button>
+                <button id="'" class="key First" onclick="append('\'')">'</button>
+                <button id=":" class="key Second" onclick="append(':')">:</button>
+                <button id="&quot;" class="key Second" onclick='append(`\"`)'>"</button>
             </div>
             <div class="row">
-                <button class="key alphabet" onclick="append('z')">z</button>
-                <button class="key alphabet" onclick="append('x')">x</button>
-                <button class="key alphabet" onclick="append('c')">c</button>
-                <button class="key alphabet" onclick="append('v')">v</button>
-                <button class="key alphabet" onclick="append('b')">b</button>
-                <button class="key alphabet" onclick="append('n')">n</button>
-                <button class="key alphabet" onclick="append('m')">m</button>
-                <button class="key First" onclick="append(',')">,</button>
-                <button class="key First" onclick="append('.')">.</button>
-                <button class="key First" onclick="append('/')">/</button>
-                <button class="key Second" onclick="append('<')"><</button>
-                <button class="key Second" onclick="append('>')">></button>
-                <button class="key Second" onclick="append('?')">?</button>
+                <button id="z" class="key alphabet" onclick="append('z')">z</button>
+                <button id="x" class="key alphabet" onclick="append('x')">x</button>
+                <button id="c" class="key alphabet" onclick="append('c')">c</button>
+                <button id="v" class="key alphabet" onclick="append('v')">v</button>
+                <button id="b" class="key alphabet" onclick="append('b')">b</button>
+                <button id="n" class="key alphabet" onclick="append('n')">n</button>
+                <button id="m" class="key alphabet" onclick="append('m')">m</button>
+                <button id="," class="key First" onclick="append(',')">,</button>
+                <button id="." class="key First" onclick="append('.')">.</button>
+                <button id="/" class="key First" onclick="append('/')">/</button>
+                <button id="&lt;" class="key Second" onclick="append('<')">&lt;</button>
+                <button id="&gt;" class="key Second" onclick="append('>')">&gt;</button>
+                <button id="?" class="key Second" onclick="append('?')">?</button>
             </div>
             <button class="special-btn"onclick="special()">Shift</button>
         </div>

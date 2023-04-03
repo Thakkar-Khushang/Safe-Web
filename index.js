@@ -10,8 +10,9 @@ for(var i = 0; i < 26; i++){
     // append to cipher
     ciphered += pool[shifted];
     map[cipher[i]] = pool[shifted];
+    var button = document.getElementById(cipher[i]);
+    button.title = pool[shifted];
     appendToTable(cipher[i], pool[shifted], 0);
-
     // remove the character from the original pool
     var newPool = pool.substring(0, shifted) + pool.substring(shifted+1, pool.length);
     pool =  newPool;
@@ -27,6 +28,8 @@ for(var i = 0; i < 10; i++){
     // append to cipher
     ciphered += pool[shifted];
     map[cipher[i]] = pool[shifted];
+    var button = document.getElementById(cipher[i]);
+    button.title = pool[shifted];
     appendToTable(cipher[i], pool[shifted], 1);
 
     // remove the character from the original pool
@@ -43,6 +46,8 @@ for(var i = 0; i < 28; i++){
     // append to cipher
     ciphered += pool[shifted];
     map[cipher[i]] = pool[shifted];
+    var button = document.getElementById(cipher[i]);
+    button.title = pool[shifted];
     appendToTable(cipher[i], pool[shifted], 2);
 
     // remove the character from the original pool
