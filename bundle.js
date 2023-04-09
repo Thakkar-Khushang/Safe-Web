@@ -38,7 +38,7 @@ let contractAbi = [
       "type": "function"
     }
 ];
-let contractAddress = "0x83d826E8dC9721F4441AE2F40127B36495fA4BDA";
+let contractAddress = "0x1AE230B5B9F53a03ac7101FBB0e99DF13b7f65CD";
 
 let web3 = new Web3("http://127.0.0.1:7545/");
 let imageStorage = new web3.eth.Contract(contractAbi, contractAddress);
@@ -51,11 +51,13 @@ function storeImage(e){
     var file = document.getElementById("image").files[0];
     var reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onload = function(){
-        var base64 = reader.result;
-        console.log(base64)
+    reader.onload = async function(){
+        var base64 = reader.result.split(',')[1];
+        const encryptedBase64 = await encrypt(base64);
+        console.log(encryptedBase64)
         // store image
-        imageStorage.methods.storeImage(uname, base64).send({from: "0x0D651C36073d813820Add4E426f1BcEb554a449C", gas: 3000000}).then(function(receipt){
+        imageStorage.methods.storeImage(uname, encryptedBase64).send({from: "0x68bBBA10a2d3B44e75beb47ba58fcd48D3917D2F", gas: 999999999}).then(function(receipt){
+            alert("Image stored successfully");
             console.log(receipt);
         });
     }
@@ -64,14 +66,15 @@ function storeImage(e){
 
 function fetchImage(){
     let uname = document.getElementById("input").value;
-    imageStorage.methods.getImage(uname).call().then(function(result){
+    imageStorage.methods.getImage(uname).call().then(async function(result){
         if(result == ""){
             alert("No image found");
             return;
         }
+        var decryptedBase64 = await decrypt(result.split(',')[1]);
         var div = document.getElementById("fetched-img");
         var img = document.createElement("img");
-        img.src = result;
+        img.src = decryptedBase64;
         div.appendChild(img);
     });
 }

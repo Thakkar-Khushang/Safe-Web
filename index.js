@@ -46,7 +46,9 @@ for(var i = 0; i < 28; i++){
     ciphered += pool[shifted];
     map[cipher[i]] = pool[shifted];
     var button = document.getElementById(cipher[i]);
-    button.title = pool[shifted];
+    if(button !=null){
+        button.title = pool[shifted];
+    }
     appendToTable(cipher[i], pool[shifted], 2);
 
     // remove the character from the original pool

